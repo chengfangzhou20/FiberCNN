@@ -1,0 +1,28 @@
+{% extends 'base3.html' %}
+
+{% block body_block %}
+
+<h1 style='color:white'> Summary:</h1>
+
+<div class="jumbotron2">
+  <h3 style='color:white'>The probabilty of fiber recruitment percentage within 0 ~ 20% is:</h3>
+  <p style='color:red'>{{ p0 }}</p>
+
+  <h3 style='color:white'>The probabilty of fiber recruitment percentage within 20 ~ 50% is:</h3>
+  <p style='color:red'>{{ p1 }}</p>
+
+  <h3 style='color:white'>The probabilty of fiber recruitment percentage within 50 ~ 100% is:</h3>
+  <p style='color:red'>{{ p2 }}</p>
+
+  <h3 style='color:white'>The predicted fiber recruitment percentage of this is:</h3>
+  <p style='color:red'>{{ prediction }}</p>
+
+  <img src="../static/tempory.jpg" alt="Image doesn't display correctly" width="500" height="500">
+</div>
+
+
+<div class="bottom">
+  <h6 style='color:white'>Contact: chengfangzhou20@gmail.com</h6>
+
+</div>
+{% endblock %}

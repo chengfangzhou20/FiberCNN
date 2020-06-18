@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+
+<div class="jumbotron">
+  <h2 style='color:white'>Automatic Fiber Recruitment Quantification Using Deep learning</h2>
+  <h4 style='color:white'>Classifier trained with multiphoton image data from Anne Robertson's lab</h4>
+  <br>
+  <br>
+  <br>
+
+  <h2 style="color:white"> Menu </h2>
+   <ul>
+     <li style="font-size:30px"><a class='nav-bar-link' href="{% url 'method' %}"><p style='color:white'>Method of labeling training images</p></a></li>
+     <li style="font-size:30px"><a class='nav-bar-link' href="{% url 'list' %}"> <p style='color:white'> Process your image<p></a></li>
+   </ul>
+
+</div>
+
+
+<div class="bottomright">
+  <h5 style='color:white'>Contact: chengfangzhou20@gmail.com</h5>
+
+</div>
+{% endblock %}

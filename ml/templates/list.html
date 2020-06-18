@@ -1,0 +1,29 @@
+{% extends "base3.html" %}
+
+{% block body_block %}
+<h5 style='color:white'>Standard Multiphoton projection image (.tif) is required for the predicition</h5>
+<form class="" action="{% url "list" %}" method="post" enctype = "multipart/form-data">
+  {% csrf_token %}
+
+  <p style='color:white'>{{ form.non_field_errors }}</p>
+  <p style='color:white'>{{ form.imagefile.label_tag}}
+    {{ form.imagefile.help_text }}
+  </p>
+
+  <p style='color:white'>{{ form.imagefile.errors}}
+    {{ form.imagefile }}
+  </p>
+  <p><input type="submit" name="upload_img" value="Upload">
+
+
+  <p><a class='navbar-brand' href="{% url 'engine' %}" style='color:white'>Click here to check the results</a></p>
+
+
+  </p>
+</form>
+
+{% if documents %}
+<!--<img src="{{ image_path1 }}" alt="Image doesn't display correctly">-->
+<img src="../static/tempory.jpg" alt="Image doesn't display correctly" width="500" height="500">
+{% endif %}
+{% endblock %}
